@@ -1,0 +1,132 @@
+Playing again the Veteran computer 
+
+Human 	Computer
+S		S
+S		R
+P		P
+P		R
+R		R
+R		S
+S		P
+P		P
+P		P
+P		S
+R		R
+R		R
+R		P
+S		P
+P		R
+R		S
+S		P
+P		S
+R		R
+R		P
+S		P
+R		R
+R		S
+S		P
+P		S
+R		R
+R		P
+S		P
+P		R
+R		S
+P		R
+R		P
+S		S
+S		S
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+S		R
+P		S
+R		P
+
+Personal Wins 14
+Ties 12
+Computer Wins 74
+
+P ==> Paper
+R ==> Rock
+S ==> Scissor
+
+
+Strategy
+
+Starts with scissor because the opponent will start with paper
+
+if  win with scissor previous round, computer will throw with rock, so i throw paper
+
+
+If win with paper previous round, computer will throw scissor, so i throw rock
+
+If i win with rock previous round, computer will throw paper so i throw scissor
+
+
+If computer wins with paper previous round , throw scissors
+
+If computer wins with scissor previous round, throw rock
+
+If computer wins with rock previous, throw paper
+
+if ties keeps playing with same hand until win

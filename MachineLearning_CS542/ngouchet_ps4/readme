@@ -1,0 +1,51 @@
+In order to run the code, you might need to install multiple libraries
+
+
+Multi Class SVM
+
+
+
+Analysis of the different algorithms used :
+
+SVM for multi classification
+
+In order to build each of my algorithms for the different SVMs for multi classification. I had to build basic SVM which was designed initially
+to do binary classification  To separate data to +1 and -1 depending on the sign of f(x) =  W'basis(x) + b. in higher dimension
+we would use a kernel instead of the basic formula. f(x) = sum(alpha*y*kernel(xi, x)).
+
+One vs All
+
+The accuracy is 95.0%, 950 out 1000 predictions correct.
+
+For one vs all SVM, i had to first segment all the data in partitions labeled as 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. After splitting the datasets
+into the different subsets. I build pairs of data. 0 versus ALL , 1 Versus ALL ... 9 versus ALL. i had to labelled my pairs, +1 for 0 and -1 for ALL.
+I did that for everything. After that i trained my SVM which individual pair. And with each SVM trained on each pair and inputted my testing data and i would get the values
+returned by f(x) each time. After having all those array of predicted labels on all the different pair. The decision happens and the data is assigned to the class
+that produced the biggest value of f(x)
+
+
+
+
+One vs one SVM
+
+The accuracy is 95.2%, 952 out 1000 predictions correct
+i had to first segment all the data in partitions labeled as 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. After splitting the datasets
+into the different subsets. I build pairs of data 01 , 02 , 03 ... 89 which is in total 45 pairs. for every pair, i had to classify in +1 and -1 arbitrary
+Then i trained my SVM which each individual pairs. After that i test my testing data with every pairs and keep track of the different labeled assigned
+to every data. Then the decision happens by majority vote. The label that appears the most for each testing data is assigned to it.
+
+
+
+
+DAG SVM
+
+The accuracy is 95.0%, 950 out 1000 predictions correct
+i had to first segment all the data in partitions labeled as 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. After splitting the datasets
+into the different subsets. I build pairs of data 01 , 02 , 03 ... 89 which is in total 45 pairs. The process is the same as ONE VS ONE SVM
+The difference happens at the end with the decision. The decision is done based on a decision tree.
+
+example
+
+ As the top-level classification, we can choose any pair of classes. And except for the leaf node if  f(x)ij < 0
+ , we consider that x does not belong to class j, and if  f(x)ij < 0  not class i. Thus, if   f(x)12 > 0  , x does not belong to class II. Therefore, it belongs to either class I or class III,
+ and the next classification pair is classes I and III.
