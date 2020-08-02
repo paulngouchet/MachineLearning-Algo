@@ -1,18 +1,13 @@
 clear all
 img = imread('Bayes-noise.png');
-
 image = img(:,:,1);
 image = int8(image);
 grayscale = transform_grayscale(image);
-
 y = grayscale;
 sz = size(grayscale);
 xDimensinon = sz(2);
 yDimensinon = sz(1);
-
 count = 0;
-
-
 h = -.01;
 beta = 15;
 eta = 10;
@@ -33,24 +28,16 @@ while (flip)
                 flip = 1;
             end
         end
-    end
-    
+    end    
 end
 
 correct = imread('Bayes.png');
 correct_need = int8(correct(:,:,1));
 correct_binary = transform_grayscale(correct_need);
-
-
 accuracy = correctness(correct_binary, grayscale);
-
-
 grayscale = uint8(grayscale);
 imshow(255 * grayscale);
-
-
 figure();
 imshow(uint8(y) * 255);
-
 fprintf('Accuracy: %.2f \n', accuracy)
 
