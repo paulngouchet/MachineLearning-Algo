@@ -7,13 +7,11 @@ import numpy as np
 import itertools
 from pandas_ml import ConfusionMatrix
 
-
 mat = scipy.io.loadmat('MNIST_data.mat')
 X_train = np.array(mat['train_samples'])
 y_train = np.array(mat['train_samples_labels']).reshape((mat['train_samples_labels'].shape[0],))
 X_test = np.array(mat['test_samples'])
 y_test = np.array(mat['test_samples_labels']).reshape((mat['test_samples_labels'].shape[0],))
-
 
 def data_clustering(X_train, y_train):
     X_train0 = []
@@ -26,7 +24,6 @@ def data_clustering(X_train, y_train):
     X_train7 = []
     X_train8 = []
     X_train9 = []
-
 
     for i in xrange(X_train.shape[0]):
         if y_train[i] == 0:
@@ -60,7 +57,6 @@ def generate_data(X1, X2):
 
 
 def transform_data(predict, plus, minus):
-
     for i in xrange(predict.shape[0]):
         if predict[i] == 1 :
             predict[i] = plus
